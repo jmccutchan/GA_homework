@@ -1,0 +1,5 @@
+In order to use logistic regression for the auto data set, I transformed the mpg variable to something categorical (above/below average classes).  Input number of folds desired after command line argument, for instance:
+
+python sklearn_logreg.py 8 
+
+will run the program using 8 folds. 
