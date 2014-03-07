@@ -1,0 +1,37 @@
+
+
+
+Explaination:-
+svm.py contains:-
+1) cross validation and calculation of RMSE using SVM classification
+2) cross validation and calculation of RMSE using logistic regression
+3) ROC curve for wineries data
+4) plotting the data on graph using wineries data
+
+
+Assumptions:-
+In order to run SVM classification and Logistic regression, we need to have different classes for each training set.
+
+so, i classified them using some observations:-
+our main problem is to predict whether future sales are dependent on social media or not.
+so in order for the above statement to be true, sales must be directly proportional to social media growth
+so if sales are high social media numbers should also be high and the same applies for the inverse also.
+
+what i did was calculate average sales(St) and average social presence(At),now
+for each tuple in wineries data
+	if sales > St and Total Social media > At then classify it as "1"
+	if sales < St and Total Social media < At then classify it as "1"
+	if sales > St and Total Social media < At then classify it as "0"
+	if sales < St and Total Social media > At then classify it as "0"
+P.S:-Total social media = (fb likes+fb checkins + tweets + followers)/4
+
+so now we have binary classifier(1 or 0) which tells us whether these social media presence will affect sales or not.
+
+So,After classifying the data, i applied SVM classification and logistic regression on this data to get RMSE for every fold during cross validation.  
+
+
+
+RESULTS:-
+Because of less data and high outliers in data tuples, results are not that appreciable.The only way these classifiers can perfrom well is if we have much more data and if they are already classified, then we will get very good results.
+
+
